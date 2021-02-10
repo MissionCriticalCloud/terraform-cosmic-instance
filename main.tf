@@ -9,6 +9,7 @@ resource "cosmic_instance" "default" {
   service_offering = var.service_offering
   template         = var.template
   user_data        = var.user_data
+  affinity_group_ids = var.affinity_group_ids
 
   lifecycle {
     ignore_changes = [template, user_data]

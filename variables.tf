@@ -64,3 +64,9 @@ variable "user_data" {
   default     = null
   description = "Instance user data"
 }
+
+variable "affinity_group_ids" {
+  description = "Host affinity group IDs if required for the instance"
+  type        = list(string)
+  default     = []
+}
