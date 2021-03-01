@@ -11,7 +11,7 @@ variable "disk_offering" {
 }
 
 variable "disks" {
-  type        = map()
+  type        = map(object)
   default     = {}
   description = "Map of additional disks to create and attach"
 }
