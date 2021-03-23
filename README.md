@@ -27,7 +27,7 @@ Terraform module to provision a Cosmic instance.
 | affinity\_group\_ids | Host affinity group IDs if required for the instance | `list(string)` | `[]` | no |
 | disk\_controller | Disk controller type | `string` | `null` | no |
 | disk\_offering | Disk offering to default to | `string` | `null` | no |
-| disks | Map of additional disks to create and attach | `map` | `{}` | no |
+| disks | Map of additional disks to create and attach | `map(any)` | `{}` | no |
 | ip\_address | Instance IP address | `string` | `null` | no |
 | root\_disk\_size | Root disk size (in GB) | `string` | `null` | no |
 | service\_offering | Cosmic service offering | `string` | `null` | no |
