@@ -1,5 +1,6 @@
 resource "cosmic_instance" "default" {
   name               = var.name
+  affinity_group_ids = var.affinity_group_ids
   disk_controller    = var.disk_controller
   expunge            = true
   ip_address         = var.ip_address
@@ -9,7 +10,6 @@ resource "cosmic_instance" "default" {
   service_offering   = var.service_offering
   template           = var.template
   user_data          = var.user_data
-  affinity_group_ids = var.affinity_group_ids
 
   lifecycle {
     ignore_changes = [template, user_data]
