@@ -1,3 +1,9 @@
+variable "affinity_group_ids" {
+  type        = list(string)
+  default     = []
+  description = "Host affinity group IDs"
+}
+
 variable "disk_controller" {
   type        = string
   default     = null
@@ -63,10 +69,4 @@ variable "user_data" {
   type        = string
   default     = null
   description = "Instance user data"
-}
-
-variable "affinity_group_ids" {
-  type        = list(string)
-  default     = []
-  description = "Host affinity group IDs"
 }
