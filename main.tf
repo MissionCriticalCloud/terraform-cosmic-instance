@@ -1,14 +1,15 @@
 resource "cosmic_instance" "default" {
-  name             = var.name
-  disk_controller  = var.disk_controller
-  expunge          = true
-  ip_address       = var.ip_address
-  network_id       = var.network_id
-  optimise_for     = lower(var.os_type) == "windows" ? "Windows" : "Generic"
-  root_disk_size   = var.root_disk_size
-  service_offering = var.service_offering
-  template         = var.template
-  user_data        = var.user_data
+  name               = var.name
+  affinity_group_ids = var.affinity_group_ids
+  disk_controller    = var.disk_controller
+  expunge            = true
+  ip_address         = var.ip_address
+  network_id         = var.network_id
+  optimise_for       = lower(var.os_type) == "windows" ? "Windows" : "Generic"
+  root_disk_size     = var.root_disk_size
+  service_offering   = var.service_offering
+  template           = var.template
+  user_data          = var.user_data
 
   lifecycle {
     ignore_changes = [template, user_data]

@@ -1,3 +1,9 @@
+variable "affinity_group_ids" {
+  type        = list(string)
+  default     = []
+  description = "Host affinity group IDs"
+}
+
 variable "disk_controller" {
   type        = string
   default     = null
@@ -11,7 +17,7 @@ variable "disk_offering" {
 }
 
 variable "disks" {
-  type        = map
+  type        = map(any)
   default     = {}
   description = "Map of additional disks to create and attach"
 }
