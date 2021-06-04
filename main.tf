@@ -18,7 +18,7 @@ resource "cosmic_instance" "default" {
 
 resource "cosmic_disk" "default" {
   for_each           = var.disks
-  name               = "${var.name}-${each.key}"
+  name               = each.key
   attach             = true
   device_id          = try(each.value.device_id, null)
   disk_controller    = try(each.value.disk_controller, "SCSI")
