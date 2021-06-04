@@ -37,7 +37,7 @@ Terraform module to provision a Cosmic instance.
 
 | Name | Description |
 |------|-------------|
-| id | Iinstance ID |
+| id | Instance ID |
 | ip\_address | Instance IP address |
 | name | Instance name |
 
