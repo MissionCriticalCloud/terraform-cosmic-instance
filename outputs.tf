@@ -1,5 +1,5 @@
 output "id" {
-  description = "Iinstance ID"
+  description = "Instance ID"
   value       = cosmic_instance.default.id
 }
 
